@@ -1,0 +1,337 @@
+/* Component LESS */
+
+/* Portrait phones and smaller */
+
+#header {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    min-height: 122px;
+    border: none;
+    border-radius: 0;
+}
+
+#header .navbar-brand  {
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    #logo {
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: 700;
+        font-size: 1.5em;
+        letter-spacing: 0.1em;
+        margin-left: 5px;
+
+        a {
+            display: block;
+            /*background-color: #c94663;*/
+            background-color: #7e57c2;
+            background-image: url("/images/bg1.png");
+            border-radius: 0.2em;
+            text-align: center;
+            box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1), 0 0.025em 0.15em 0em rgba(0, 0, 0, 0.75);
+            text-decoration: none;
+            color: #fff;
+            padding: 20px 15px 24px 15px;
+        }
+    }
+}
+
+#header .menu-icon {
+    color: #fff;
+    font-size: 20px;
+    display: none;
+    border-radius: 15px;
+    background-color: #7e57c2;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    padding-right: 1px;
+    vertical-align: middle;
+}
+
+#header .menu-icon.icon-manage-icon {
+    font-size: 23px;
+    padding-top: 3px;
+    padding-right: 2px;
+}
+
+#header .menu-icon.gear_1 {
+    padding-left: 1px;
+}
+
+#header nav.navbar.navbar-default .navbar-header {
+    min-height: 122px;
+    background: #364050 url("/images/bg1.png");
+    border: none;
+    border-radius: 0;
+    color: white;
+}
+
+#header .container-fluid {
+    height: 122px;
+    background-color: #4527a0;
+}
+
+#header .navbar-default {
+    height: 122px;
+    border: none;
+    border-radius: 0;
+}
+
+#header .navbar {
+    border: none;
+    border-bottom: 1px solid #4527a0;
+    border-radius: 0;
+}
+
+#header .navbar-toggle,
+#header .navbar-toggle:focus {
+    margin-top: 22px;
+    border: 1px solid #f0f0f0;
+    background-color: transparent;
+}
+
+#header .navbar-toggle .icon-bar {
+    background-color: #f0f0f0;
+}
+
+#header .navbar-default .navbar-collapse  {
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#header .navbar-default .navbar-collapse {
+    background-color: #4527a0;
+}
+
+#header .navbar-default .navbar-collapse[aria-expanded="true"] .dropdown.open .dropdown-toggle {
+    background-color: #4527a0;
+}
+#header .navbar-default .navbar-collapse[aria-expanded="true"] .dropdown.open .dropdown-menu,
+#header .navbar-default .navbar-collapse[aria-expanded="true"] .dropdown.open .dropdown-menu,
+#header .navbar-default .navbar-collapse[aria-expanded="true"] .dropdown.open .dropdown-menu li a {
+    background-color: #ccc;
+    border-radius: 0;
+    border: none;
+    color: #111;
+}
+
+#header .navbar-default .navbar-collapse .dropdown.open .dropdown-menu {
+    border-radius: 0;
+    background-color: #ccc;
+    border: none;
+    color: #000;
+}
+
+#header .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #333;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/*
+
+#header .navbar-default .navbar-collapse[aria-expanded="true"]
+.dropdown.open .dropdown-menu li .submenuCategory {
+    display: none;
+}
+*/
+
+#header .navbar-default .navbar-nav {
+    margin: 0;
+}
+
+#header .navbar-default .navbar-nav > li {
+    border-top: 1px solid #a8a8a8;
+    z-index: 100;
+    background: #364050 url('/images/bg1.png');
+}
+
+#header .navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    line-height: 32px;
+    padding-left: 20px;
+}
+
+#header .navbar-default  .navbar-nav li.dropdown.open li {
+    background-color: #ccc;
+}
+#header .navbar-default .navbar-nav li.dropdown.open li.divider {
+    background-color: #666;
+}
+#header .navbar-default .navbar-nav li.dropdown.open > a {
+    background-color: #673ab7;
+}
+
+#header .navbar-default .navbar-nav li.dropdown [class*="glyphicon-chevron-"] {
+    margin-right: 5px;
+    margin-top: 1px;
+}
+
+#header .navbar-collapse .navbar-nav li.dropdown .glyphicon-chevron-right,
+#header .navbar-collapse .navbar-nav li.dropdown.open .glyphicon-chevron-down {
+    display: inline-block;
+    margin-top: 9px;
+}
+
+#header .navbar-collapse .navbar-nav li.dropdown.open .glyphicon-chevron-right,
+#header .navbar-collapse .navbar-nav li.dropdown .glyphicon-chevron-down {
+    display: none;
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+    #header .navbar-brand {
+        #logo {
+            font-size: 2em;
+        }
+    }
+}
+
+/* Portrait tablets and small desktops and up */
+@media (min-width: 768px) {
+    #header {
+        background: #364050 url("/images/bg1.png");
+/*        background-color: #005bb2;
+        background-image: -webkit-linear-gradient(#0097d0, #005bb2);
+        background-image:    -moz-linear-gradient(#0097d0, #005bb2);
+        background-image:      -o-linear-gradient(#0097d0, #005bb2);
+        background-image:         linear-gradient(#0097d0, #005bb2);*/
+        border: none;
+        border-radius: 0;
+    }
+
+    #header .navbar {
+        background: #364050 url("/images/bg1.png");
+        border: none;
+        border-radius: 0;
+        height: 122px;
+    }
+
+    #header .menu-icon {
+        color: #fff;
+        font-size: 20px;
+        display: inline-block;
+    }
+
+    #header .menu-icon.chart_1 {
+        font-size: 17px;
+    }
+
+    #header .container-fluid {
+        background-color: transparent;
+    }
+
+    #header .navbar-default .navbar-collapse  {
+        border: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        background-color: transparent;
+    }
+
+    #header .navbar-collapse .navbar-nav li.dropdown .glyphicon-chevron-down,
+    #header .navbar-collapse .navbar-nav li.dropdown.open .glyphicon-chevron-down,
+    #header .navbar-collapse .navbar-nav li.dropdown .glyphicon-chevron-right,
+    #header .navbar-collapse .navbar-nav li.dropdown.open .glyphicon-chevron-right {
+        display: none;
+    }
+
+    #header .navbar-default .navbar-nav {
+        margin-left: 100px;
+        margin-top: 18px;
+    }
+
+    #header .navbar-default .navbar-nav > li {
+        border: none;
+        background: none;
+        background-color: transparent;
+/*            border-top: 1px solid #a8a8a8;
+            z-index: 100;
+            background: #364050 url('/images/bg1.png');*/
+    }
+
+    #header .navbar-default .navbar-nav > li > a {
+        padding: 26px 10px;
+    }
+
+    #header .navbar-default .navbar-nav > li > a > .nav-header-text {
+        vertical-align: middle;
+    }
+
+    #header .navbar-default .navbar-nav > li.dropdown.open > a {
+        height: 122px;
+        background-color: #4527a0;
+    }
+
+    #header .navbar-default .navbar-nav li.dropdown.open a {
+        background-color: #f0f0f0;
+    }
+
+    #header .navbar-default .navbar-nav > li.dropdown.open .dropdown-menu {
+        background-color: #f0f0f0;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        color: #717073;
+        width: 206px;
+        padding: 12px 0;
+    }
+
+    #header .dropdown-menu > li {
+        margin-left: 0;
+    }
+
+/*
+
+    #header .dropdown-menu > li > a,
+    #header .dropdown-menu > li > .submenuCategory {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+*/
+
+    #header .dropdown-menu > li > a:hover {
+        background-color: #b4cad5 !important;
+    }
+
+    #header .navbar-default .navbar-nav > li.dropdown.open .dropdown-menu .divider {
+        width: 155px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+/*
+    These aren't being used for now but if we add sub items to the menu we'll need it
+
+    #header .navbar-default .navbar-nav > li.dropdown.open .dropdown-menu .submenuCategory {
+        font-size: 18px;
+        color: #005984;
+        display: inline-block;
+    }
+
+    #header .navbar-default .navbar-collapse[aria-expanded="true"]
+	.dropdown.open .dropdown-menu li a.submenuCategory {
+        display: inline-block;
+    }
+*/
+
+}
+
+@media (min-width: 992px) {
+    #header .navbar-default .navbar-nav {
+        float: right;
+    }
+    #header .navbar-default .navbar-nav > li > a {
+        padding: 26px 20px;
+    }
+}
+
+/* Add Component LESS Above */
