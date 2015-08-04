@@ -17,6 +17,7 @@
         };
 
         function headerController() {
+            /* jshint validthis: true */
             var vm = this;
 
             vm.navbarCollapsed = true;

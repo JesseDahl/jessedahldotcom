@@ -31,6 +31,18 @@
       {
         "name": "appSettings",
         "file": "shared\\app-settings\\app-settings.js"
+      },
+      {
+        "name": "resume",
+        "file": "sections\\resume\\resume.js"
+      },
+      {
+        "name": "spinner",
+        "file": "sections\\spinner\\spinner.js"
+      },
+      {
+        "name": "layout",
+        "file": "layout\\layout.js"
       }
     ]
   }

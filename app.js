@@ -1,4 +1,4 @@
-angular.module('jessedahldotcom', ['ui.bootstrap', 'ui.utils', 'ngRoute', 'ngAnimate', 'sections/home', 'jdHeader', 'appSettings']);
+angular.module('jessedahldotcom', ['ui.bootstrap', 'ui.utils', 'ngRoute', 'ngAnimate', 'sections/home', 'jdHeader', 'appSettings', 'resume', 'spinner']);
 
 angular.module('jessedahldotcom').config(function($routeProvider, pathConstants) {
 
@@ -12,6 +12,11 @@ angular.module('jessedahldotcom').config(function($routeProvider, pathConstants)
     $routeProvider.when(pathConstants.SPINNER, {
         controller: 'SpinnerController',
         templateUrl: 'sections/spinner/spinner.html'
+    });
+
+    $routeProvider.when(pathConstants.RESUME, {
+        controller: 'ResumeController',
+        templateUrl: 'sections/resume/resume.html'
     });
 
     $routeProvider.otherwise({redirectTo:'/home'});
