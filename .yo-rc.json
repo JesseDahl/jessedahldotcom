@@ -43,6 +43,10 @@
       {
         "name": "layout",
         "file": "layout\\layout.js"
+      },
+      {
+        "name": "blog",
+        "file": "sections\\blog\\blog.js"
       }
     ]
   }

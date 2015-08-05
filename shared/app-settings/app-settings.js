@@ -3,6 +3,7 @@ angular.module('appSettings', []);
 angular.module('appSettings').constant("pathConstants", {
     HOME: "/home",
     SPINNER: "/spinner",
-    RESUME: "/resume"
+    RESUME: "/resume",
+    BLOG: "/blog"
 });
 

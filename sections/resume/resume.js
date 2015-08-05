@@ -1,8 +1,12 @@
-angular.module('resume', ['ui.bootstrap','ui.utils','ngRoute','ngAnimate']);
+(function() {
+    'use strict';
 
-angular.module('resume').config(function($routeProvider) {
+    angular.module('resume', []);
 
-    /* Add New Routes Above */
+    angular.module('resume').controller('ResumeController', ResumeController);
 
-});
+    function ResumeController($scope) {
+
+    }
+})();
 

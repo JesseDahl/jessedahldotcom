@@ -1,8 +1,13 @@
-angular.module('spinner', ['ui.bootstrap','ui.utils','ngRoute','ngAnimate']);
+(function() {
+    'use strict';
 
-angular.module('spinner').config(function($routeProvider) {
+    angular.module('spinner', []);
 
-    /* Add New Routes Above */
+    angular.module('spinner').controller('SpinnerController', SpinnerController);
 
-});
+    function SpinnerController($scope) {
+
+    }
+
+})();
 
