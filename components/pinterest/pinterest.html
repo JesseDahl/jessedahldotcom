@@ -1,0 +1,16 @@
+<article class="pin-box"
+         ng-repeat="box in vm.boxes">
+
+    <section class="pin-img-box">
+        <img class="pin-img" ng-src="{{box.imgSrc}}">
+    </section>
+
+    <header>
+        <h3>
+            <a ng-href="{{box.blogUrl}}">{{box.title}}</a>
+        </h3>
+    </header>
+    <section class="pin-synopsis">
+        {{box.synopsis}}
+    </section>
+</article>

@@ -1,4 +1,5 @@
-angular.module('jessedahldotcom', ['ui.bootstrap', 'ui.utils', 'ngRoute', 'ngAnimate', 'jdHeader', 'appSettings', 'sections']);
+angular.module('jessedahldotcom',
+    ['ui.bootstrap', 'ui.utils', 'ngRoute', 'ngAnimate', 'jdHeader', 'components.pinterest', 'appSettings', 'sections']);
 
 angular.module('jessedahldotcom').config(function($routeProvider, pathConstants) {
 
