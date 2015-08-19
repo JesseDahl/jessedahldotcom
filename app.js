@@ -1,10 +1,10 @@
 angular.module('jessedahldotcom',
-    ['ui.bootstrap', 'ui.utils', 'ngRoute', 'ngAnimate', 'jdHeader', 'components.pinterest', 'appSettings', 'sections']);
+    ['ui.bootstrap', 'ui.utils', 'ngRoute', 'ngAnimate', 'jdHeader', 'components.pinterest', 'appSettings', 'sections',
+     'ngSanitize']);
 
 angular.module('jessedahldotcom').config(function($routeProvider, pathConstants) {
 
     /* Add New Routes Above */
-    //$routeProvider.when('/home', {
     $routeProvider.when(pathConstants.HOME, {
         controller: 'HomeController',
         templateUrl: 'sections/home/home.html'
@@ -20,12 +20,21 @@ angular.module('jessedahldotcom').config(function($routeProvider, pathConstants)
         templateUrl: 'sections/resume/resume.html'
     });
 
+    $routeProvider.when(pathConstants.BLOG + "/:id", {
+        controller: 'BlogController',
+        templateUrl: 'sections/blog/blog.html'
+    });
+
     $routeProvider.when(pathConstants.BLOG, {
         controller: 'BlogController',
         templateUrl: 'sections/blog/blog.html'
     });
 
-    $routeProvider.otherwise({redirectTo:'/home'});
+    $routeProvider.when(pathConstants[404], {
+        templateUrl: 'sections/404/404.html'
+    });
+
+    $routeProvider.otherwise({redirectTo:'/404'});
 
 });
 

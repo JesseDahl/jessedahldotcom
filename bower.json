@@ -21,6 +21,7 @@
     "angular-bootstrap": "~0.13.2",
     "moment": "~2.5",
     "less.js": "~1.6",
-    "font-awesome": "~4.0"
+    "font-awesome": "~4.0",
+    "angular-sanitize": "~1.4.4"
   }
 }

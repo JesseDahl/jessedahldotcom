@@ -4,11 +4,13 @@
 
 #header {
     position: relative;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: 600;
-    min-height: 122px;
+    min-height: 110px;
     border: none;
     border-radius: 0;
+    /*font-family: 'Lora', serif;*/
+    /*font-family: 'Playfair Display', serif;*/
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
 #header .navbar-brand  {
@@ -19,18 +21,17 @@
     #logo {
         font-family: 'Open Sans Condensed', sans-serif;
         font-weight: 700;
-        font-size: 1.5em;
+        font-size: 1.25em;
         letter-spacing: 0.1em;
         margin-left: 5px;
 
         a {
             display: block;
             background-color: #c94663;
-            /*background-color: #7e57c2;*/
             background-image: url("/images/bg1.png");
             border-radius: 0.2em;
             text-align: center;
-            box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1), 0 0.025em 0.15em 0em rgba(0, 0, 0, 0.75);
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0.025em 0.15em 0 rgba(0, 0, 0, 0.75);
             text-decoration: none;
             color: #fff;
             padding: 20px 15px 24px 15px;
@@ -39,7 +40,7 @@
 }
 
 #header nav.navbar.navbar-default .navbar-header {
-    min-height: 122px;
+    min-height: 110px;
     background: #364050 url("/images/bg1.png");
     border: none;
     border-radius: 0;
@@ -47,22 +48,19 @@
 }
 
 #header .container-fluid {
-    height: 122px;
-    /*background-color: #4527a0;*/
     background-color: #c94663;
 }
 
 #header .navbar-default {
-    height: 122px;
+    /*height: 122px;*/
     border: none;
     border-radius: 0;
-    box-shadow: 0px 3px 4px #999;
+    box-shadow: 0 3px 4px #999;
 }
 
 #header .navbar {
     border: none;
-    /*border-bottom: 1px solid #4527a0;*/
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    /*border-bottom: 1px solid rgba(0, 0, 0, 0.15);*/
     border-radius: 0;
 }
 
@@ -90,12 +88,10 @@
 }
 
 #header .navbar-default .navbar-collapse {
-    /*background-color: #4527a0;*/
     background-color: #c94663;
 }
 
 #header .navbar-default .navbar-collapse[aria-expanded="true"] .dropdown.open .dropdown-toggle {
-    /*background-color: #4527a0;*/
     background-color: #c94663;
 }
 #header .navbar-default .navbar-collapse[aria-expanded="true"] .dropdown.open .dropdown-menu,
@@ -140,8 +136,6 @@
 
 #header .navbar-default .navbar-nav > li > a {
     color: #ffffff;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
     line-height: 32px;
     padding-left: 20px;
 }
@@ -153,7 +147,6 @@
     background-color: #666;
 }
 #header .navbar-default .navbar-nav li.dropdown.open > a {
-    /*background-color: #673ab7;*/
     background-color: #c94663;
 }
 
@@ -175,9 +168,17 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
-    #header .navbar-brand {
-        #logo {
-            font-size: 2em;
+    #header nav.navbar.navbar-default .navbar-header {
+        min-height: 122px;
+    }
+
+    #header {
+        min-height: 122px;
+
+        .navbar-brand {
+            #logo {
+                font-size: 2em;
+            }
         }
     }
 }
@@ -188,11 +189,6 @@
 @media (min-width: 768px) {
     #header {
         background: #364050 url("/images/bg1.png");
-/*        background-color: #005bb2;
-        background-image: -webkit-linear-gradient(#0097d0, #005bb2);
-        background-image:    -moz-linear-gradient(#0097d0, #005bb2);
-        background-image:      -o-linear-gradient(#0097d0, #005bb2);
-        background-image:         linear-gradient(#0097d0, #005bb2);*/
         border: none;
         border-radius: 0;
     }
@@ -241,7 +237,7 @@
         background: none;
         background-color: transparent;
         border-bottom: solid 1px rgba(0,0,0, 0.25);
-        box-shadow: inset 0px 1px 0px 0px rgba(255, 2555, 255, 0.25);
+        box-shadow: inset 0 1px 0 0 rgba(255, 2555, 255, 0.25);
         margin-left: 40px;
     }
 
@@ -255,7 +251,6 @@
 
     #header .navbar-default .navbar-nav > li.dropdown.open > a {
         height: 122px;
-        /*background-color: #4527a0;*/
         background-color: #c94663;
     }
 

@@ -7,10 +7,11 @@
 
     <header>
         <h3>
-            <a ng-href="{{box.blogUrl}}">{{box.title}}</a>
+            <a ng-href="#/{{box.blogUrl}}">{{box.title}}</a>
         </h3>
     </header>
     <section class="pin-synopsis">
-        {{box.synopsis}}
+        <!--{{box.synopsis}}-->
+        <p ng-bind-html="box.synopsis | linky"></p>
     </section>
 </article>
