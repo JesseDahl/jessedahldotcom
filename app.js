@@ -1,10 +1,12 @@
 angular.module('jessedahldotcom',
     ['ui.bootstrap', 'ui.utils', 'ngRoute', 'ngAnimate', 'jdHeader', 'components.pinterest', 'appSettings', 'sections',
-     'ngSanitize']);
+     'ngSanitize', 'appconstants']);
 
 angular.module('jessedahldotcom').config(function($routeProvider, pathConstants) {
 
     /* Add New Routes Above */
+
+
     $routeProvider.when(pathConstants.HOME, {
         controller: 'HomeController',
         templateUrl: 'sections/home/home.html'

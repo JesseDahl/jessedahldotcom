@@ -5,8 +5,9 @@
 
     angular.module('home').controller('HomeController', HomeController);
 
-    function HomeController($scope) {
-
+    function HomeController($scope, version) {
+        $scope.config = version;
+        console.log(version);
         // TODO: fetch this data from a service
         $scope.boxes = [{
             imgSrc: "images/spinner.jpg",
