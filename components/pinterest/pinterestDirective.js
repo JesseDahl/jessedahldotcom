@@ -14,18 +14,9 @@
                 maxWidth: "@"
             },
             templateUrl: 'components/pinterest/pinterest.html',
-            controller: pinterestBoxController,
-            controllerAs: "vm",
-            bindToController: true
+            compile: function(element, attrs) {
+                $(".pin-box").css("maxWidth", attrs.maxWidth);
+            }
         };
-    }
-
-    function pinterestBoxController($timeout) {
-        /* jshint validthis: true */
-        var vm = this;
-
-        $timeout(function() {
-            $(".pin-box").css("maxWidth", vm.maxWidth);
-        });
     }
 })();

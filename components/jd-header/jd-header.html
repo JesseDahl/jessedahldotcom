@@ -7,23 +7,24 @@
                 <span class="sr-only">Toggle navigation</span>
             </button>
             <div class="navbar-brand" href="#">
-                <h1 id="logo"><a href="#">{ Jesse Dahl }</a></h1>
+                <h1 id="logo"><a ng-href="#{{::vm.pathConstants.HOME}}">{ Jesse Dahl }</a></h1>
             </div>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" collapse="vm.navbarCollapsed"  ng-click="vm.navbarCollapsed = true">
-            <ul class="nav navbar-nav navbar-left">
+            <!--<ul class="nav navbar-nav navbar-right">-->
+            <ul class="nav navbar-nav">
                 <li>
-                    <a ng-href="#{{::vm.pathConstants.HOME}}" >
+                    <a ng-href="#{{::vm.pathConstants.PORTFOLIO}}" >
                         <!--<i class="glyphicon glyphicon-home menu-icon"></i>-->
-                        <span class="nav-header-text">Home</span>
+                        <span class="nav-header-text">Portfolio</span>
                     </a>
                 </li>
                 <li>
-                    <a ng-href="#{{::vm.pathConstants.SPINNER}}" >
+                    <a ng-href="#{{::vm.pathConstants.BLOG}}" >
                         <!--<i class="glyphicon glyphicon-home menu-icon"></i>-->
-                        <span class="nav-header-text">Spinner</span>
+                        <span class="nav-header-text">Blog</span>
                     </a>
                 </li>
                 <li>

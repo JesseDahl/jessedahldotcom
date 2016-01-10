@@ -4,6 +4,7 @@ angular.module('jessedahldotcom',
 
 angular.module('jessedahldotcom').config(function($routeProvider, pathConstants) {
 
+    $routeProvider.when('portfolio',{templateUrl: 'sections/portfolio/portfolio.html'});
     /* Add New Routes Above */
 
 
