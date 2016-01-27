@@ -2,7 +2,9 @@
          ng-repeat="box in ::boxes">
 
     <section class="pin-img-box" ng-cloak>
-        <img class="pin-img" ng-src="{{box.imgSrc}}">
+        <a ng-href="#/{{box.blogUrl}}">
+            <img class="pin-img" ng-src="{{box.imgSrc}}">
+        </a>
     </section>
 
     <header>

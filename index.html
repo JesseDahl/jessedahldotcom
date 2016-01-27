@@ -7,8 +7,25 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Open+Sans:400,700|Open+Sans+Condensed:700,300,300italic|Lora:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
     <link href="app.less" type="text/css" rel="stylesheet/less">
+
+    <!--<base href="/">-->
 </head>
 <body>
+
+
+<div id="wrapper">
+    <div id="header">
+        <jd-header></jd-header>
+    </div>
+    <div id="main-content">
+        <a id="top"></a>
+
+        <div ng-view></div>
+    </div>
+
+    <!--<div id="footer"></div>-->
+</div>
+
 
 <!-- Livereload script for development only (stripped during dist build) -->
 <script src="http://localhost:35729/livereload.js" data-concat="false"></script>
@@ -31,6 +48,7 @@
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="bower_components/angular-ui-utils/ui-utils.js"></script>
+<script src="bower_components/angular-gist/angular-gist.js"></script>
 <!-- Add New Bower Component JS Above -->
 
 
@@ -41,25 +59,14 @@
 <script src="components/jd-header/jd-header.js"></script>
 <script src="components/pinterest/pinterestDirective.js"></script>
 <script src="shared/app-settings/app-settings.js"></script>
+<script src="shared/blogpostSvc.js"></script>
 <script src="shared/appconstants.js"></script>
+<script src="components/trustAsHtml/trustAsHtmlFilter.js"></script>
 <script src="sections/resume/resume.js"></script>
 <script src="sections/spinner/spinner.js"></script>
 <script src="sections/blog/blog.js"></script>
 <script src="sections/portfolio/portfolio.js"></script>
 <!-- Add New Component JS Above -->
-
-<div id="wrapper">
-    <div id="header">
-        <jd-header></jd-header>
-    </div>
-    <div id="main-content">
-        <a id="top"></a>
-
-        <div ng-view></div>
-    </div>
-
-    <!--<div id="footer"></div>-->
-</div>
 
 
 </body>

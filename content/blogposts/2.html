@@ -1,0 +1,149 @@
+<header class="blog-header">
+    <h2 class="blog-title">Building a responsive analytics platform - the beginning</h2>
+    <p class="blog-lede">
+        <strong></strong>
+    </p>
+    <span class="blog-by-line">By: <span class="blog-author">Jesse Dahl</span> on Jan 21, 2016</span>
+    <span class="blog-tags">
+        <span class="blog-tag">responsive design</span>
+        <span class="blog-tag">angularjs</span>
+    </span>
+</header>
+<section class="blog-body">
+    <p class="blog-paragraph">
+        <span class="blog-first-letter">A</span>s it goes with many user-facing projects built by large corporations,
+        proper attention and care is not given to the UX design of an application before it starts getting implemented.
+
+    </p>
+    <p class="blog-paragraph">
+        So it went with Experian's AudienceView. This project’s front-end tech stack consisted of the following:
+    </p>
+    <ul>
+        <li>AngularJS</li>
+        <li>Bootstrap</li>
+        <li>LESS</li>
+        <li>Grunt</li>
+    </ul>
+    </p>
+    <p class="blog-paragraph">
+        In this post I will discuss how I used a mobile-first process to make this application responsive.
+    </p>
+    <h3 class="blog-paragraph-header">Beginnings</h3>
+    <p class="blog-paragraph">
+        The project's mockups were an incoherent, incomplete mess that no one was really responsible for,
+        nor working on. We literally made it up as we went and built a lot of good functionality quickly.
+    </p>
+    <p class="blog-paragraph">
+        Halfway into the project we finally managed to land a Graphic Designer! Most of the code and markup was
+        already written! Yay!
+    </p>
+    <h3 class="blog-paragraph-header">The Mockups</h3>
+    <p class="blog-paragraph">
+        Soon she (<a target="_blank" href="http://melledujour.com">Melanie Green</a>) produced annotated mockups (similar to the image below).
+    </p>
+    <div id="img-container--home-page" class="blog-img-box">
+        <img src="images/audienceview/home-full.png" />
+        <span class="blog-img--caption">home page mockup</span>
+    </div>
+    <p class="blog-paragraph">
+        My task was to create a working, responsive and mobile-ready web application out of it, salvaging the
+        existing code base and UI to do so.
+    </p>
+    <p class="blog-paragraph">
+        The main techniques I used to make the site responsive were Media
+        Queries and Bootstrap 3’s Grid System.
+    </p>
+    <p class="blog-paragraph">
+        I would normally include responsive images, but this was an analytics app with 1 image on the main page,
+        so it wasn’t very important. We had captive users who visited the app over and over.
+    </p>
+    <h3 class="blog-paragraph-header">Media Queries</h3>
+    <p class="blog-paragraph">
+        Media queries are an important tool in mobile-first driven development. They allow you to specify styles
+        based on the viewport’s dimensions. Since the project used Bootstrap 3, I decided to borrow the same
+        breakpoints (thanks to Nicholas Cerminara for a
+        <a target="_blank" href="https://scotch.io/quick-tips/default-sizes-for-twitter-bootstraps-media-queries">great reference</a>
+        that I’ve come back to many times). Below are the breakpoints I used.
+    </p>
+    <!--<script src="https://gist.github.com/JesseDahl/aa14fb683bc4869cede2.js"></script>-->
+    <gist id="aa14fb683bc4869cede2"></gist>
+    <p class="blog-paragraph">
+        I used the mobile-first design method (<a target="_blank" href=http://abookapart.com/products/mobile-first>why mobile-first?</a>),
+        which required me to make many liberties with the desktop mockups. I first divided the mockup into its
+        main sections, then decided how each of the elements within would fall in a small phone-sized viewport.
+    </p>
+    <div id="img-container--home-main-sections" class="blog-img-box">
+        <img src="images/audienceview/home-full--main-sections.png">
+        <span class="blog-img--caption">home page sections</span>
+    </div>
+    <h3 class="blog-paragraph-header">Mobile View</h3>
+    <div id="img-container--phone" class="blog-img-box">
+        <img src="images/audienceview/home-phone.png">
+        <span class="blog-img--caption">phone view</span>
+    </div>
+    <p class="blog-paragraph">
+        As you can see in the mobile view, I collapsed the menu items into a “hamburger menu”. Normally I would
+        try to avoid hamburger menus and keep the menu items visible, but the size of the product logo and name
+        was too large to include both, so I stuffed them into the hamburger.
+    </p>
+    <p class="blog-paragraph">
+        The next thing you see is the dropdown that lets you run reports, the primary functionality of our application.
+        The dropdown was just barely wide enough to display its content adequately, even after shrinking the
+        button. Was a dropdown the right choice for this UI element? No. I think a typeahead type dropdown would
+        probably have been easier to use, and it was certainly on my radar for the next iteration.
+    </p>
+    <p class="blog-paragraph">
+        The next 4 buttons contained the rest of the functionality of the application, which was creating ad-hoc
+        reports based on web traffic data married with population demographics data. If you look back at the
+        desktop mockup, you’ll see it has the buttons side-by-side, which I stacked (a common technique for
+        adapting content to mobile devices). Despite the stacking, all the buttons remained visible.
+    </p>
+    <p class="blog-paragraph">
+        The only thing you can’t see above the fold is the image of our app inside of a monitor, which has limited
+        value for repeat users.
+    </p>
+    <h3 class="blog-paragraph-header">Large Phone + Small Tablet View</h3>
+    <div id="img-container--home-first-break" class="blog-img-box">
+        <img src="images/audienceview/home-first-break.png">
+        <span class="blog-img--caption">first breakpoint</span>
+    </div>
+    <p class="blog-paragraph">
+        As you can see here, I kept the main grid layout stacked, and used the extra width to make some content
+        wider (the “Run Report” dropdown), and unstack some other content (crosstab, digital behavior, snapshots
+        buttons, and the help section).
+    </p>
+    <p class="blog-paragraph">
+        You might notice that the buttons are wider in the phone version than they are at this first breakpoint.
+        I often use a combination of min-width and max-width in px or em’s with width in percent to let an element
+        adapt to its available width while ensuring the content within doesn’t scale down to an unusable width.
+    </p>
+    <p class="blog-paragraph">
+        I also brought out the menu items and removed the hamburger. When possible, it is a good idea to expose
+        available content and functionality to the user without requiring effort on the user’s part.
+    </p>
+    <h3 class="blog-paragraph-header">Large Tablet + Small Desktop View</h3>
+    <div id="img-container--home-tablet" class="blog-img-box">
+        <img src="images/audienceview/home-second-break.png">
+        <span class="blog-img--caption">larger mobile devices</span>
+    </div>
+    <p class="blog-paragraph">
+        You can see here that I finally unstacked the second main grid div. As a result, the content area for
+        the first breakpoint was reduced. You will usually get increased vertical height along with this larger
+        viewport, so the main functionality is still available and visible above the fold even though the buttons
+        are again stacked.
+    </p>
+    <h3 class="blog-paragraph-header">Conclusion</h3>
+    <p class="blog-paragraph">
+        Although the UX design process didn’t employ a mobile-first method, I still felt like it was beneficial
+        to start by approaching the implementation in a mobile-first method. I did not find it difficult to
+        create a small viewport version of the app and scale up to larger screens from there.
+    </p>
+    <p class="blog-paragraph">
+        While it depends on the context, I would definitely lean towards using this method for creating anything
+        that is public facing and informational, since usage is trending more and more towards mobile devices.
+        For complicated business type web apps that require a lot of user interaction, how you decide to implement
+        it should depend to a great deal on who your users are and how they will be accessing your webapp. More
+        and more though, we are seeing people replacing their laptop usage with tablet usage, so making considerations
+        for touch-based interfaces is going to remain very important.
+    </p>
+</section>

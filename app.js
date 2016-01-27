@@ -1,8 +1,8 @@
 angular.module('jessedahldotcom',
     ['ui.bootstrap', 'ui.utils', 'ngRoute', 'ngAnimate', 'jdHeader', 'components.pinterest', 'appSettings', 'sections',
-     'ngSanitize', 'appconstants']);
+     'ngSanitize', 'appconstants', 'gist', 'ngSanitize', 'blogpostSvc', 'trustAsHtmlFilter']);
 
-angular.module('jessedahldotcom').config(function($routeProvider, pathConstants) {
+angular.module('jessedahldotcom').config(function($routeProvider, $locationProvider, pathConstants) {
 
     $routeProvider.when('portfolio',{templateUrl: 'sections/portfolio/portfolio.html'});
     /* Add New Routes Above */
@@ -26,6 +26,9 @@ angular.module('jessedahldotcom').config(function($routeProvider, pathConstants)
     $routeProvider.when(pathConstants.BLOG + "/:id", {
         controller: 'BlogController',
         templateUrl: 'sections/blog/blog.html'
+        /*templateUrl: function($routeParams) {
+            return 'content/blogposts/' + $routeParams.id + ".html";
+        }*/
     });
 
     $routeProvider.when(pathConstants.BLOG, {
@@ -38,6 +41,8 @@ angular.module('jessedahldotcom').config(function($routeProvider, pathConstants)
     });
 
     $routeProvider.otherwise({redirectTo:'/404'});
+
+    /*$locationProvider.html5Mode(true);*/
 
 });
 
