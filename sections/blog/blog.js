@@ -12,11 +12,8 @@
 
         $scope.blogText = "";
 
-        console.log($routeParams);
-
         if ($routeParams.id) {
             blogpostSvc.get($routeParams.id).then(function(res) {
-                console.log(res);
                 $scope.blogText = res.data;
             });
         }

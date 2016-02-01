@@ -1,6 +1,6 @@
 angular.module('jessedahldotcom',
     ['ui.bootstrap', 'ui.utils', 'ngRoute', 'ngAnimate', 'jdHeader', 'components.pinterest', 'appSettings', 'sections',
-     'ngSanitize', 'appconstants', 'gist', 'ngSanitize', 'blogpostSvc', 'trustAsHtmlFilter']);
+     'ngSanitize', 'appconstants', 'gist', 'ngSanitize', 'blogpostSvc', 'trustAsHtmlFilter', 'angular-bind-html-compile']);
 
 angular.module('jessedahldotcom').config(function($routeProvider, $locationProvider, pathConstants) {
 
